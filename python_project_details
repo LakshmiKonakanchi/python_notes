@@ -1,0 +1,1028 @@
+Create a complete, production-style Senior Banking Data Engineering & Analytics project for hands-on practice in Python, SQL, PostgreSQL, Data Engineering, Analytics, Data Science, Machine Learning, and AI Data Engineering.
+
+The project should simulate a realistic banking/financial-services environment and should be designed specifically for someone preparing for senior-level Data Engineer, AI Data Engineer, Analytics Engineer, BI Developer, Data Analyst, and Data/ML Engineering roles.
+
+The project should allow me to progressively practise:
+
+1. Python fundamentals
+2. Advanced Python
+3. Python for Data Engineering
+4. Python for Data Analysis
+5. Python for Data Science
+6. Python for Machine Learning
+7. SQL
+8. PostgreSQL
+9. ETL/ELT
+10. Data Warehousing
+11. Data Modelling
+12. Data Quality
+13. Data Governance
+14. Data Analytics
+15. Business Intelligence
+16. Machine Learning
+17. AI/Data Engineering
+18. Automation
+19. Production engineering practices
+
+BANKING BUSINESS DOMAIN
+
+Create a realistic banking ecosystem containing multiple business areas such as:
+
+* Customers
+* Customer demographics
+* Accounts
+* Savings accounts
+* Current/checking accounts
+* Loans
+* Credit cards
+* Transactions
+* Payments
+* Transfers
+* Beneficiaries
+* Branches
+* Employees
+* Products
+* Interest rates
+* Fees
+* Commissions
+* ATM transactions
+* POS transactions
+* Online banking transactions
+* Mobile banking transactions
+* KYC
+* AML
+* Fraud
+* Credit scores
+* Loan applications
+* Loan repayments
+* Delinquencies
+* Defaults
+* Customer complaints
+* Customer service interactions
+* Digital channels
+* Login/session activity
+* Risk ratings
+* Marketing campaigns
+* Customer segmentation
+
+DATASET REQUIREMENTS
+
+Create realistic synthetic banking data with enough volume and complexity for meaningful analysis.
+
+Provide PostgreSQL SQL scripts that create:
+
+* Database/schema structure
+* Schemas
+* Tables
+* Primary keys
+* Foreign keys
+* Unique constraints
+* NOT NULL constraints
+* CHECK constraints
+* Indexes
+* Sequences/identity columns
+* Views
+* Materialized views where appropriate
+* Functions
+* Stored procedures where useful
+* Triggers where useful
+
+Create realistic relationships between the tables.
+
+Include:
+
+* One-to-one relationships
+* One-to-many relationships
+* Many-to-many relationships
+* Hierarchical relationships
+* Transactional relationships
+
+Generate realistic records with:
+
+* Null values
+* Duplicate records
+* Invalid records
+* Outliers
+* Missing values
+* Incorrect data types
+* Invalid dates
+* Referential-integrity issues
+* Duplicate transactions
+* Suspicious transactions
+* Incorrect customer information
+* Inconsistent categorical values
+
+These issues should be intentional so that I can practise data cleaning and data quality.
+
+DATA VOLUME
+
+Provide multiple dataset sizes so the same project can be practised at different levels:
+
+Level 1:
+Small dataset suitable for local development.
+
+Level 2:
+Medium dataset suitable for realistic analytics.
+
+Level 3:
+Large dataset suitable for performance testing and optimisation.
+
+Explain how to generate millions of transaction records efficiently using Python and PostgreSQL rather than manually inserting millions of rows.
+
+PYTHON TECHNOLOGIES
+
+Use Python extensively.
+
+Cover appropriate libraries such as:
+
+Core Python:
+
+* Variables
+* Functions
+* Classes
+* OOP
+* Decorators
+* Generators
+* Iterators
+* Context managers
+* Exception handling
+* Type hints
+* Dataclasses
+* Logging
+* Configuration management
+* Virtual environments
+* Packaging
+
+Data Engineering:
+
+* pandas
+* NumPy
+* SQLAlchemy
+* psycopg
+* pathlib
+* os
+* subprocess
+* json
+* csv
+* datetime
+* logging
+* requests
+* asyncio where appropriate
+
+Data Analysis:
+
+* pandas
+* NumPy
+* scipy
+* statistics
+
+Visualisation:
+
+* Matplotlib
+* Seaborn
+* Plotly
+
+Machine Learning:
+
+* scikit-learn
+* XGBoost or another appropriate library where useful
+
+Data Validation:
+
+* Pandera
+* Great Expectations or an equivalent framework
+
+Testing:
+
+* pytest
+* unittest where appropriate
+* mocking
+
+Code Quality:
+
+* Ruff
+* Black
+* isort
+* mypy where useful
+
+Database:
+
+* SQLAlchemy
+* psycopg
+* PostgreSQL
+
+Do not force every library into every component. Explain where each library is appropriate and why.
+
+SQL REQUIREMENTS
+
+Use PostgreSQL as the primary SQL database.
+
+Teach and practise:
+
+* SELECT
+* JOINs
+* GROUP BY
+* HAVING
+* CASE
+* Subqueries
+* CTEs
+* Recursive CTEs
+* Window functions
+* Ranking
+* Aggregations
+* Date/time analysis
+* String functions
+* JSON/JSONB
+* Arrays
+* UPSERT
+* MERGE where supported/appropriate
+* Temporary tables
+* Views
+* Materialized views
+* Stored procedures/functions
+* Transactions
+* Locks
+* Isolation levels
+* Query optimisation
+* EXPLAIN
+* EXPLAIN ANALYZE
+* Indexing
+* Partitioning
+* Constraints
+* Referential integrity
+
+Also explain equivalent approaches in Microsoft SQL Server where relevant because I am preparing for senior SQL Server/BI roles.
+
+DATA ENGINEERING ARCHITECTURE
+
+Design the project using a production-style architecture such as:
+
+Source Systems
+→ Landing Layer
+→ Bronze Layer
+→ Silver Layer
+→ Gold Layer
+→ Data Warehouse
+→ Semantic/Analytics Layer
+→ Dashboards/ML
+
+Explain the purpose of every layer.
+
+Use a Medallion Architecture and explain how it maps to traditional ETL/Data Warehouse architecture.
+
+ETL/ELT
+
+Implement multiple pipelines.
+
+Examples:
+
+1. Batch ETL
+2. Incremental ETL
+3. Full load
+4. Incremental load
+5. Upsert
+6. Slowly Changing Dimension processing
+7. CDC-style processing
+8. Historical data processing
+9. Late-arriving data
+10. Error handling
+11. Retry mechanisms
+12. Restartable pipelines
+13. Idempotent pipelines
+14. Audit logging
+15. Reconciliation
+16. Data quality checks
+17. Dependency management
+
+Create Python ETL pipelines that extract data from PostgreSQL, files, and simulated APIs, transform the data, validate it, and load it into analytical tables.
+
+DATA SOURCES
+
+Use multiple simulated source systems:
+
+* PostgreSQL transactional database
+* CSV
+* Excel
+* JSON
+* REST API
+* Simulated external credit bureau
+* Simulated fraud service
+* Simulated exchange-rate API
+* Simulated customer/KYC system
+
+Explain how the same data would be handled in a real banking organisation.
+
+DATA WAREHOUSE
+
+Create a proper dimensional Data Warehouse.
+
+Include:
+
+* Fact tables
+* Dimension tables
+* Factless fact tables where appropriate
+* Degenerate dimensions
+* Conformed dimensions
+* Role-playing dimensions
+* Date dimension
+* Time dimension
+* Customer dimension
+* Account dimension
+* Branch dimension
+* Product dimension
+* Channel dimension
+* Transaction fact
+* Loan fact
+* Payment fact
+* Fraud fact
+
+Implement:
+
+* Star schema
+* Snowflake schema
+* Surrogate keys
+* Natural keys
+* Slowly Changing Dimensions Type 1
+* Slowly Changing Dimensions Type 2
+* Historical tracking
+* Effective dates
+* Expiry dates
+* Current-record indicators
+
+Explain why each modelling decision is appropriate.
+
+DATA MODELLING
+
+Show the progression:
+
+OLTP
+→ Normalisation
+→ Data Integration
+→ Data Warehouse
+→ Dimensional Model
+→ Data Mart
+→ Analytics Layer
+
+Include real banking examples for every stage.
+
+DATA QUALITY
+
+Create a complete Data Quality framework.
+
+Check:
+
+* Completeness
+* Accuracy
+* Consistency
+* Validity
+* Uniqueness
+* Timeliness
+* Referential integrity
+* Duplicate detection
+* Null detection
+* Range validation
+* Business-rule validation
+
+Create a data-quality scorecard.
+
+For every pipeline, report:
+
+* Records received
+* Records processed
+* Records rejected
+* Records loaded
+* Duplicate records
+* Invalid records
+* Null violations
+* Business-rule violations
+* Processing time
+
+DATA VALIDATION
+
+Use Python-based validation frameworks where appropriate.
+
+Create reusable validation functions/classes.
+
+Implement rules such as:
+
+* Account balance cannot be invalid
+* Transaction amount must be positive where applicable
+* Transaction date cannot be before account creation
+* Loan repayment cannot exceed applicable business constraints
+* Customer must exist before transaction
+* Currency must be valid
+* Account must be active for permitted transactions
+* KYC status must meet business rules
+* Fraud scores must be within expected ranges
+
+Store validation failures in an error/quarantine table.
+
+DATA GOVERNANCE AND SECURITY
+
+Include realistic banking governance concepts:
+
+* PII
+* Sensitive customer information
+* Data classification
+* Masking
+* Tokenisation concepts
+* Encryption concepts
+* Role-based access
+* Least privilege
+* Audit logging
+* Data lineage
+* Metadata
+* Data ownership
+* Data retention
+* Regulatory considerations
+
+Do not use real customer information. Use only synthetic data.
+
+DATA ANALYSIS AND EDA
+
+Perform comprehensive EDA using Python.
+
+Analyse:
+
+* Customer behaviour
+* Transaction behaviour
+* Account balances
+* Deposits
+* Withdrawals
+* Loans
+* Repayments
+* Defaults
+* Credit cards
+* Fraud
+* Digital banking usage
+* Branch performance
+* Customer churn
+* Product performance
+
+Include:
+
+* Univariate analysis
+* Bivariate analysis
+* Multivariate analysis
+* Correlation
+* Distribution analysis
+* Outlier detection
+* Time-series analysis
+* Cohort analysis
+* Customer segmentation
+
+FEATURE ENGINEERING
+
+Create realistic features for banking use cases.
+
+Examples:
+
+* Transaction frequency
+* Transaction velocity
+* Average transaction amount
+* Monthly spending
+* Monthly income
+* Deposit frequency
+* Withdrawal frequency
+* Account tenure
+* Customer lifetime value
+* Credit utilisation
+* Debt-to-income ratio
+* Repayment ratio
+* Delinquency count
+* Number of active products
+* Digital engagement
+* Branch engagement
+* Fraud velocity indicators
+
+Explain the business meaning of each feature.
+
+MACHINE LEARNING
+
+Create several realistic ML use cases.
+
+At minimum include:
+
+1. Customer churn prediction
+2. Fraud detection
+3. Loan default prediction
+4. Customer segmentation
+5. Credit-risk prediction
+
+For each ML project cover:
+
+* Business problem
+* Target variable
+* Feature selection
+* Data preparation
+* Train/test split
+* Cross-validation
+* Feature engineering
+* Model training
+* Model evaluation
+* Hyperparameter tuning
+* Model comparison
+* Explainability
+* Prediction pipeline
+* Model persistence
+* Batch prediction
+* Monitoring considerations
+
+Use suitable evaluation metrics.
+
+For fraud:
+
+* Precision
+* Recall
+* F1
+* PR-AUC
+* ROC-AUC
+* Confusion matrix
+
+For credit/default:
+
+* ROC-AUC
+* Precision
+* Recall
+* F1
+* Calibration where appropriate
+
+Explain why accuracy alone is not suitable for many banking ML problems.
+
+FEATURE STORE / ML DATA PIPELINE
+
+Where appropriate, design a simple feature-store-like architecture.
+
+Show:
+
+Raw Data
+→ Clean Data
+→ Feature Engineering
+→ Feature Table
+→ Training Dataset
+→ Model
+→ Predictions
+
+Explain training-serving consistency and data leakage.
+
+AI DATA ENGINEERING
+
+Add senior-level AI Data Engineering concepts:
+
+* ML data pipelines
+* Training data generation
+* Feature pipelines
+* Batch inference
+* Model scoring
+* Data drift
+* Feature drift
+* Model monitoring
+* Data lineage
+* ML metadata
+* Model versioning
+* Reproducibility
+* Experiment tracking concepts
+* MLOps
+* AI-ready data platforms
+
+Also explain how this architecture could later be migrated to:
+
+* Microsoft Fabric
+* Azure
+* Databricks
+* Spark
+* Delta Lake
+* Microsoft Power BI
+
+Do not require these platforms to run the local project unless necessary.
+
+REAL-TIME / STREAMING
+
+Add a simulated real-time banking transaction pipeline.
+
+For example:
+
+Transaction Event
+→ Event Stream Simulation
+→ Python Consumer
+→ Validation
+→ Fraud Rules
+→ Feature Generation
+→ PostgreSQL
+→ Alert Table
+→ Dashboard
+
+Explain how this could later be implemented using:
+
+* Kafka
+* Azure Event Hubs
+* Spark Structured Streaming
+* Microsoft Fabric Eventstream
+* Databricks
+
+The local implementation should use lightweight Python simulation where possible.
+
+DASHBOARDS
+
+Create Python dashboards using an appropriate framework such as:
+
+* Plotly Dash
+* Streamlit
+
+Create dashboards for:
+
+1. Executive Banking Dashboard
+2. Customer Analytics
+3. Transaction Analytics
+4. Fraud Monitoring
+5. Loan/Risk Analytics
+6. Data Quality Dashboard
+7. ETL Pipeline Monitoring
+
+Include KPIs such as:
+
+* Total Customers
+* Active Customers
+* Total Deposits
+* Total Withdrawals
+* Total Transactions
+* Transaction Volume
+* Average Transaction Value
+* Loan Portfolio
+* Outstanding Loans
+* Default Rate
+* NPL Ratio
+* Fraud Rate
+* Fraud Amount
+* Customer Churn Rate
+* Digital Adoption
+* Customer Lifetime Value
+* Revenue
+* Fees
+* Profitability
+
+AUTOMATION AND ORCHESTRATION
+
+Create automated workflows.
+
+Cover:
+
+* Scheduled execution
+* Dependency management
+* Logging
+* Error handling
+* Retry
+* Alerts
+* Pipeline status
+* Failure recovery
+* Incremental processing
+* Backfills
+
+Use Python-based orchestration initially.
+
+Then explain how the same architecture would be implemented using:
+
+* Apache Airflow
+* Azure Data Factory
+* Microsoft Fabric Data Factory
+* Databricks Workflows
+
+TESTING
+
+Create a testing strategy covering:
+
+* Unit tests
+* Integration tests
+* Data-quality tests
+* Pipeline tests
+* SQL tests
+* ML tests
+* Regression tests
+
+Use pytest.
+
+Create realistic test cases for both successful and failed scenarios.
+
+OBSERVABILITY
+
+Add production-style monitoring.
+
+Track:
+
+* Pipeline start/end time
+* Duration
+* Row counts
+* Failure counts
+* Data-quality scores
+* API failures
+* Database failures
+* Retry count
+* Processing latency
+* Data freshness
+
+Create an audit framework.
+
+PERFORMANCE OPTIMISATION
+
+Include senior-level performance exercises.
+
+For PostgreSQL:
+
+* Indexing
+* Composite indexes
+* Partial indexes
+* Query plans
+* EXPLAIN ANALYZE
+* Partitioning
+* Vacuum/Analyze concepts
+* Bulk loading
+* COPY
+* Batch processing
+* Connection pooling
+* Query optimisation
+
+For Python:
+
+* Vectorisation
+* Chunk processing
+* Memory optimisation
+* Efficient pandas usage
+* Generator usage
+* Parallel processing where appropriate
+* Async processing where appropriate
+
+Create deliberately slow implementations and then optimise them so I can compare performance.
+
+CI/CD AND GIT
+
+Structure the project as a professional Git repository.
+
+Include:
+
+* README
+* requirements.txt or pyproject.toml
+* .gitignore
+* Environment configuration
+* SQL scripts
+* Python packages
+* Tests
+* Documentation
+* Configuration files
+* Logging
+* Data-generation scripts
+
+Explain:
+
+* Git branching
+* Pull requests
+* Code review
+* CI/CD
+* Automated tests
+* Deployment concepts
+
+Provide an example CI/CD pipeline using GitHub Actions.
+
+PROJECT STRUCTURE
+
+Create a professional folder structure similar to:
+
+banking-data-platform/
+│
+├── data/
+├── sql/
+├── src/
+│   ├── ingestion/
+│   ├── transformation/
+│   ├── validation/
+│   ├── loading/
+│   ├── analytics/
+│   ├── features/
+│   ├── ml/
+│   ├── monitoring/
+│   └── utils/
+│
+├── pipelines/
+├── dashboards/
+├── notebooks/
+├── tests/
+├── config/
+├── logs/
+├── docs/
+├── scripts/
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+Explain the purpose of every folder.
+
+PROJECT PHASES
+
+Do not give everything at once without structure.
+
+Divide the project into progressive phases.
+
+Phase 1 — Environment and PostgreSQL setup
+
+Phase 2 — Banking database and synthetic data
+
+Phase 3 — Python + PostgreSQL connectivity
+
+Phase 4 — Data extraction
+
+Phase 5 — Data cleaning
+
+Phase 6 — Data validation and quality
+
+Phase 7 — ETL/ELT pipeline
+
+Phase 8 — Data warehouse and dimensional modelling
+
+Phase 9 — Advanced SQL and optimisation
+
+Phase 10 — EDA and statistical analysis
+
+Phase 11 — Feature engineering
+
+Phase 12 — Machine learning
+
+Phase 13 — Real-time/streaming simulation
+
+Phase 14 — Dashboards
+
+Phase 15 — Automation and orchestration
+
+Phase 16 — Testing and observability
+
+Phase 17 — CI/CD and Git
+
+Phase 18 — Production architecture
+
+Phase 19 — Cloud/Fabric/Databricks migration concepts
+
+Phase 20 — Senior-level capstone
+
+For every phase provide:
+
+* Objective
+* Business problem
+* Concepts learned
+* Files to create
+* SQL to write
+* Python code to write
+* Expected output
+* Validation steps
+* Common mistakes
+* Interview questions
+* Senior-level interview discussion points
+* Real-world banking explanation
+* Optional advanced challenge
+
+HANDS-ON REQUIREMENTS
+
+Do not only explain theory.
+
+For every major topic, provide working exercises.
+
+Use a progression:
+
+Beginner
+→ Intermediate
+→ Advanced
+→ Senior
+→ Production-style challenge
+
+Where possible, make me solve the problem first and then provide the solution and explanation.
+
+INTERVIEW PREPARATION
+
+After each major phase, provide senior-level interview questions.
+
+Include scenario-based questions such as:
+
+* How would you design a banking ETL pipeline processing billions of transactions?
+* How would you make the pipeline restartable?
+* How would you implement CDC?
+* How would you handle late-arriving data?
+* How would you design SCD Type 2 for customers?
+* How would you detect duplicate transactions?
+* How would you reconcile source and target?
+* How would you optimise a slow transaction query?
+* How would you design fraud detection data pipelines?
+* How would you handle schema changes?
+* How would you monitor data quality?
+* How would you handle pipeline failures?
+* How would you design an AI-ready banking data platform?
+* How would you move this architecture to Microsoft Fabric or Databricks?
+
+For each question provide:
+
+* Short interview answer
+* Detailed answer
+* Real-world example
+* Senior-level considerations
+* Common mistakes
+
+BUSINESS CASE STUDIES
+
+Include realistic banking case studies such as:
+
+Case Study 1:
+Customer churn
+
+Case Study 2:
+Credit-card fraud
+
+Case Study 3:
+Loan default prediction
+
+Case Study 4:
+Customer lifetime value
+
+Case Study 5:
+Branch profitability
+
+Case Study 6:
+Digital banking adoption
+
+Case Study 7:
+AML/suspicious transaction analytics
+
+Case Study 8:
+Data-quality monitoring
+
+Case Study 9:
+Executive banking performance
+
+Case Study 10:
+Real-time transaction fraud monitoring
+
+FINAL CAPSTONE
+
+At the end, create one large senior-level capstone project combining:
+
+PostgreSQL
+
+* Python
+* pandas
+* NumPy
+* SQLAlchemy/psycopg
+* ETL/ELT
+* Data Quality
+* Data Warehouse
+* Dimensional Modelling
+* EDA
+* Feature Engineering
+* Machine Learning
+* Real-time processing
+* Dashboard
+* Automation
+* Testing
+* Monitoring
+* Git
+* CI/CD
+
+The final architecture should resemble a simplified production banking data platform.
+
+IMPORTANT CONSTRAINTS
+
+1. Use synthetic data only.
+2. Do not use real customer PII.
+3. PostgreSQL should be the primary local database.
+4. Python should be the primary programming language.
+5. Visual Studio Code should be the primary development environment.
+6. Keep the project runnable on a normal developer laptop.
+7. Clearly separate essential components from optional advanced components.
+8. Prefer open-source/free tools for local development.
+9. Do not introduce cloud services unless explaining how the local architecture maps to them.
+10. Do not skip fundamentals while teaching advanced concepts.
+11. Explain the reasoning behind architecture and technology choices.
+12. Show alternative implementations where useful.
+13. Include performance comparisons wherever possible.
+14. Make the project realistic enough to discuss in a senior-level interview.
+15. Never fabricate real banking data; generate realistic synthetic data.
+
+OUTPUT FORMAT
+
+Start with:
+
+1. Complete project overview
+2. Business scenario
+3. Architecture
+4. Technology stack
+5. Data model
+6. Table list and relationships
+7. Dataset design
+8. Repository structure
+9. Learning roadmap
+10. Phase 1 implementation
+
+Then proceed phase by phase.
+
+Do not dump the entire project implementation in one response.
+
+Teach me interactively, one phase at a time.
+
+For every phase, explain the theory briefly, then make me implement it in VS Code, then provide validation/testing, then give senior-level interview questions.
+
+The ultimate goal is that after completing this project I should be able to confidently discuss and demonstrate a production-style Banking AI Data Engineering project in senior Data Engineer, AI Data Engineer, Analytics Engineer, BI, and Data Engineering interviews.
+
